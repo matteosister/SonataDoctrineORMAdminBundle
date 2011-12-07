@@ -25,17 +25,17 @@ class NestedSetController extends CRUDController
             throw new AccessDeniedException();
         }
 
-        $datagrid = $this->admin->getDatagrid();
-        $formView = $datagrid->getForm()->createView();
+        //$datagrid = $this->admin->getDatagrid();
+        //$formView = $datagrid->getForm()->createView();
 
         // set the theme for the current Admin Form
-        $this->get('twig')->getExtension('form')->setTheme($formView, $this->admin->getFilterTheme());
+        //$this->get('twig')->getExtension('form')->setTheme($formView, $this->admin->getFilterTheme());
 
         return $this->render($this->admin->getListTemplate(), array(
             'action'   => 'list',
-            'form'     => $formView,
-            'datagrid' => $datagrid,
-            'roots'    => $this->getDoctrine()->getRepository($this->admin->getClass())->getRootNodes()
+            //'form'     => $formView,
+            //'datagrid' => $datagrid,
+            'roots'    => $this->get('doctrine')->getRepository($this->admin->getClass())->getRootNodes()
         ));
     }
 }
