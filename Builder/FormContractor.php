@@ -96,7 +96,7 @@ class FormContractor implements FormContractorInterface
         $options = array();
         $options['sonata_field_description'] = $fieldDescription;
 
-        if ($type == 'sonata_type_model') {
+        if ($type == 'sonata_type_model' || $type == 'sonata_type_tree') {
             $options['class']         = $fieldDescription->getTargetEntity();
             $options['model_manager'] = $fieldDescription->getAdmin()->getModelManager();
 
