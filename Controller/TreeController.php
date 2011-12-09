@@ -12,7 +12,7 @@ namespace Sonata\DoctrineORMAdminBundle\Controller;
 use Sonata\AdminBundle\Controller\CRUDController;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
-class NestedSetController extends CRUDController
+class TreeController extends CRUDController
 {
     /**
      * return the Response object associated to the list action
