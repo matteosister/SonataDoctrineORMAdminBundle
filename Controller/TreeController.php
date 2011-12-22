@@ -38,4 +38,10 @@ class TreeController extends CRUDController
             'roots'    => $this->get('doctrine')->getRepository($this->admin->getClass())->getRootNodes()
         ));
     }
+
+
+    public function moveAction()
+    {
+
+    }
 }
