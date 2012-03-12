@@ -45,6 +45,6 @@ abstract class Filter extends BaseFilter
 
     public function isActive()
     {
-        return $this->active && !$this->hidden;
+        return $this->active && !$this->isHidden();
     }
 }
